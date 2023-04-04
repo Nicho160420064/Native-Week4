@@ -9,7 +9,23 @@
         android:id="@+id/studentDetailFragment"
         android:name="com.ubaya.week4_160420064_c.view.StudentDetailFragment"
         android:label="fragment_student_detail"
-        tools:layout="@layout/fragment_student_detail" />
+        tools:layout="@layout/fragment_student_detail" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <argument
+            android:name="nama"
+            app:argType="string" />
+        <argument
+            android:name="bod"
+            app:argType="string" />
+        <argument
+            android:name="phone"
+            app:argType="string" />
+        <argument
+            android:name="url"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/studentListFragment"
         android:name="com.ubaya.week4_160420064_c.view.StudentListFragment"
