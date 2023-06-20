@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation"
-    app:startDestination="@id/studentDetailFragment">
+    app:startDestination="@id/studentListFragment">
 
     <fragment
         android:id="@+id/studentDetailFragment"
@@ -12,18 +12,6 @@
         tools:layout="@layout/fragment_student_detail" >
         <argument
             android:name="id"
-            app:argType="string" />
-        <argument
-            android:name="nama"
-            app:argType="string" />
-        <argument
-            android:name="bod"
-            app:argType="string" />
-        <argument
-            android:name="phone"
-            app:argType="string" />
-        <argument
-            android:name="url"
             app:argType="string" />
     </fragment>
     <fragment

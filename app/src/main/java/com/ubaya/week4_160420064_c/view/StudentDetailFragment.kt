@@ -26,23 +26,23 @@ class StudentDetailFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_student_detail, container, false)
     }
     fun observeViewModel() {
-        viewModel.studentLD.observe(viewLifecycleOwner, Observer {
+        viewModel.studentsLD.observe(viewLifecycleOwner, Observer {
             val id = view?.findViewById<EditText>(R.id.txtStudentID)
             val name = view?.findViewById<EditText>(R.id.txtStudentName)
             val bod= view?.findViewById<EditText>(R.id.txtBOD)
             val phone = view?.findViewById<EditText>(R.id.txtPhone)
             val image = view?.findViewById<ImageView>(R.id.imageView2)
-            id?.setText(it.id)
-            name?.setText(it.name)
-            bod?.setText(it.dob)
-            phone?.setText(it.phone)
+            id?.setText(it.get(1).toString())
+            name?.setText(it.get(2).toString())
+            bod?.setText(it.get(3).toString())
+            phone?.setText(it.get(4).toString())
 
         })
 
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         viewModel = ViewModelProvider(this).get(DetailViewModel::class.java)
-        viewModel.fetch()
+        viewModel.fetch(StudentDetailFragmentArgs.fromBundle(requireArguments()).id)
         observeViewModel()
     }
 

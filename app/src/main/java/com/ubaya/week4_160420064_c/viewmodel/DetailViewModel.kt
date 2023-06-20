@@ -1,5 +1,6 @@
 package com.ubaya.week4_160420064_c.viewmodel
 
+import android.content.Context
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -12,6 +13,7 @@ import com.google.gson.reflect.TypeToken
 import com.ubaya.week4_160420064_c.model.Student
 import com.ubaya.week4_160420064_c.view.StudentDetailFragmentArgs
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.viewModelScope
 
 
 class DetailViewModel: ViewModel() {
@@ -19,8 +21,8 @@ class DetailViewModel: ViewModel() {
     private var queue: RequestQueue? = null
     val studentLD = MutableLiveData<Student>()
 
-    fun fetch(id:String, nama:String, dob:String,phone:String,url:String) {
-        val student1 = Student(id,nama,dob,phone,url)
+    fun fetch(id:String) {
+        studentLD.value?.equals(id)
     }
 
 }
