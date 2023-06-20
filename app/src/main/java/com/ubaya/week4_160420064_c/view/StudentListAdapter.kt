@@ -48,7 +48,7 @@ class StudentListAdapter(val studenList:ArrayList<Student>) :RecyclerView.Adapte
     }
 
     override fun onButtonDetailClick(v: View) {
-        val action = StudentListFragmentDirections.actionStudentDetail(v.tag.toString())
+        val action = StudentListFragmentDirections.actionStudentDetail(v.tag.toString(),v.tag.toString(),v.tag.toString(),v.tag.toString(),v.tag.toString())
         Navigation.findNavController(v).navigate(action)
     }
 }

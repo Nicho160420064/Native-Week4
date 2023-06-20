@@ -21,8 +21,8 @@ class DetailViewModel: ViewModel() {
     private var queue: RequestQueue? = null
     val studentLD = MutableLiveData<Student>()
 
-    fun fetch(id:String) {
-        studentLD.value?.equals(id)
+    fun fetch(id:String,name:String,dob:String,phone:String,photoUrl:String) {
+        val student1 = Student(id,name,dob,phone,photoUrl )
     }
 
 }

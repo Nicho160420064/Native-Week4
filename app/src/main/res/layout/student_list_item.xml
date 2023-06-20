@@ -78,7 +78,7 @@
                     android:layout_marginBottom="8dp"
                     android:text="Detail"
                     android:tag = "@{student.id}"
-                    android:Onclick = "@{(view)->listener.onButtonDetailClick(view)}"
+                    android:Onclick = "@{listener::onButtonDetailClick}"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" />
 
